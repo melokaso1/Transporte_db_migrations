@@ -2,7 +2,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ejercicio_5.src.Modules.Type_load.Infrastructure.Entity
+namespace ejercicio_5.src.Modules.TypeLoad.Infrastructure.Entity
 {
     public class TypeLoadEntityConfiguration : IEntityTypeConfiguration<TypeLoadEntity>
     {

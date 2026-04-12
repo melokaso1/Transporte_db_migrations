@@ -2,11 +2,11 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ejercicio_5.src.Modules.Costumers.Infrastructure.Entity
+namespace ejercicio_5.src.Modules.Customers.Infrastructure.Entity
 {
-    public class CostumersEntityConfiguration : IEntityTypeConfiguration<CostumersEntity>
+    public class CostumersEntityConfiguration : IEntityTypeConfiguration<CustomersEntity>
     {
-        public void Configure(EntityTypeBuilder<CostumersEntity> builder)
+        public void Configure(EntityTypeBuilder<CustomersEntity> builder)
         {
             builder.ToTable("Costumers");
             

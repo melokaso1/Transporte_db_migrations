@@ -1,9 +1,9 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace ejercicio_5.src.Modules.Costumers.Infrastructure.Entity
+namespace ejercicio_5.src.Modules.Customers.Infrastructure.Entity
 {
-    public class CostumersEntity
+    public class CustomersEntity
     {
         public Guid Id { get; set; }
         public int Person_id { get; set; }

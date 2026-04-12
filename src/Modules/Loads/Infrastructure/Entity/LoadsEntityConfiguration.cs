@@ -2,6 +2,10 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ejercicio_5.src.Modules.Customers.Infrastructure.Entity;
+using ejercicio_5.src.Modules.TypeLoad.Infrastructure.Entity;
+using ejercicio_5.src.Modules.CitiesOrMunicipalities.Infrastructure.Entity;
+using ejercicio_5.src.Modules.StatusLoads.Infrastructure.Entity;
 
 namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity
 {
@@ -17,83 +21,83 @@ namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity
             .HasColumnType("uuid")
             .IsRequired();
 
-            builder.Property(x => x.Coustumer_id)
-            .HasColumnName("Coustumer_id")
+            builder.Property(x => x.CustomerId)
+            .HasColumnName("CustomerId")
             .HasColumnType("uuid")
             .IsRequired();
-            builder.HasMany(x => x.Coustumer_id)
-                .WithOne()
-                .HasForeignKey(x => x.Coustumer_id)
+            builder.HasOne<CustomersEntity>()
+                .WithMany()
+                .HasForeignKey(x => x.CustomerId)
                 .OnDelete(DeleteBehavior.Restrict);
             
-            builder.Property(x => x.Type_load_id)
-            .HasColumnName("Type_load_id")
+            builder.Property(x => x.TypeLoadId)
+            .HasColumnName("TypeLoadId")
             .HasColumnType("uuid")
             .IsRequired();
-            builder.HasMany(x => x.Type_load_id)
-                .WithOne()
-                .HasForeignKey(x => x.Type_load_id)
+            builder.HasOne<TypeLoadEntity>()
+                .WithMany()
+                .HasForeignKey(x => x.TypeLoadId)
                 .OnDelete(DeleteBehavior.Restrict);
             
-            builder.Property(x => x.Origin_city_id)
-            .HasColumnName("Origin_city_id")
+            builder.Property(x => x.OriginCityId)
+            .HasColumnName("OriginCityId")
             .HasColumnType("uuid")
             .IsRequired();
-            builder.HasMany(x => x.Origin_city_id)
-                .WithOne()
-                .HasForeignKey(x => x.Origin_city_id)
+            builder.HasOne<CitiesOrMunicipalitiesEntity>()
+                .WithMany()
+                .HasForeignKey(x => x.OriginCityId)
                 .OnDelete(DeleteBehavior.Restrict);
             
-            builder.Property(x => x.Destination_city_id)
-            .HasColumnName("Destination_city_id")
+            builder.Property(x => x.DestinationCityId)
+            .HasColumnName("DestinationCityId")
             .HasColumnType("uuid")
             .IsRequired();
-            builder.HasMany(x => x.Destination_city_id)
-                .WithOne()
-                .HasForeignKey(x => x.Destination_city_id)
+            builder.HasOne<CitiesOrMunicipalitiesEntity>()
+                .WithMany()
+                .HasForeignKey(x => x.DestinationCityId)
                 .OnDelete(DeleteBehavior.Restrict);
             
-            builder.Property(x => x.Origin_address)
-            .HasColumnName("Origin_address")
+            builder.Property(x => x.OriginAddress)
+            .HasColumnName("OriginAddress")
             .HasColumnType("Point")
             .IsRequired();
 
-            builder.Property(x => x.Destination_address)
-            .HasColumnName("Destination_address")
+            builder.Property(x => x.DestinationAddress)
+            .HasColumnName("DestinationAddress")
             .HasColumnType("Point")
             .IsRequired();
 
-            builder.Property(x => x.Weight_tons)
-            .HasColumnName("Weight_tons")
+            builder.Property(x => x.WeightTons)
+            .HasColumnName("WeightTons")
             .HasColumnType("decimal(10,2)")
             .IsRequired();
 
-            builder.Property(x => x.Volume_m3)
-            .HasColumnName("Volume_m3")
+            builder.Property(x => x.VolumeM3)
+            .HasColumnName("VolumeM3")
             .HasColumnType("decimal(10,2)")
             .IsRequired();
 
-            builder.Property(x => x.Pickup_date)
-            .HasColumnName("Pickup_date")
+            builder.Property(x => x.PickupDate)
+            .HasColumnName("PickupDate")
             .HasColumnType("timestamp")
             .IsRequired();
 
-            builder.Property(x => x.Offered_price)
-            .HasColumnName("Offered_price")
+            builder.Property(x => x.OfferedPrice)
+            .HasColumnName("OfferedPrice")
             .HasColumnType("decimal(19,2)")
             .IsRequired();
 
-            builder.Property(x => x.Status_id)
-            .HasColumnName("Status_id")
+            builder.Property(x => x.StatusId)
+            .HasColumnName("StatusId")
             .HasColumnType("uuid")
             .IsRequired();
-            builder.HasMany(x => x.Status_id)
-                .WithOne()
-                .HasForeignKey(x => x.Status_id)
+            builder.HasOne<StatusLoadsEntity>()
+                .WithMany()
+                .HasForeignKey(x => x.StatusId)
                 .OnDelete(DeleteBehavior.Restrict);
             
-            builder.Property(x => x.Created_at)
-            .HasColumnName("Created_at")
+            builder.Property(x => x.CreatedAt)
+            .HasColumnName("CreatedAt")
             .HasColumnType("timestamp")
             .IsRequired();
         }
