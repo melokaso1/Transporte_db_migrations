@@ -1,7 +1,6 @@
 using System;
 using NetTopologySuite.Geometries;
 
-
 namespace ejercicio_5.src.Modules.CitiesOrMunicipalities.Infrastructure.Entity
 {
     public class CitiesOrMunicipalitiesEntity

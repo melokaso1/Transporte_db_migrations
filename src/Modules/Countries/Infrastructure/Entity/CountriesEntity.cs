@@ -8,6 +8,5 @@ namespace ejercicio_5.src.Modules.Countries.Infrastructure.Entity
         public string? IsoCode { get; set; }
         public string? Name { get; set; }
         public string? PhoneCode { get; set; }
-
     }
 }

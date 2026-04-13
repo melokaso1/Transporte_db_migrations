@@ -1,43 +1,46 @@
 using System;
+using ejercicio_5.src.Modules.StatesOrRegions.Infrastructure.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ejercicio_5.src.Modules.StatesOrRegions.Infrastructure.Entity;
+
 namespace ejercicio_5.src.Modules.CitiesOrMunicipalities.Infrastructure.Entity
 {
-    public class CitiesOrMunicipalitiesEntityConfiguration : IEntityTypeConfiguration<CitiesOrMunicipalitiesEntity>
+    public sealed class CitiesOrMunicipalitiesEntityConfiguration
+        : IEntityTypeConfiguration<CitiesOrMunicipalitiesEntity>
     {
         public void Configure(EntityTypeBuilder<CitiesOrMunicipalitiesEntity> builder)
         {
             builder.ToTable("CitiesOrMunicipalities");
-            
+
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id)
-                .HasColumnName("id")
-                .HasColumnType("uuid")
-                .IsRequired();
-            
-            builder.Property(x => x.Name)
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+
+            builder
+                .Property(x => x.Name)
                 .HasColumnName("name")
                 .HasColumnType("varchar(60)")
                 .IsRequired();
-            
-            builder.Property(x => x.StateregId)
+
+            builder
+                .Property(x => x.StateregId)
                 .HasColumnName("statereg_id")
                 .HasColumnType("uuid")
                 .IsRequired();
-            builder.HasOne<StatesOrRegionsEntity>()
+            builder
+                .HasOne<StatesOrRegionsEntity>()
                 .WithMany()
                 .HasForeignKey(x => x.StateregId)
                 .OnDelete(DeleteBehavior.Restrict);
-            
-            builder.Property(x => x.Code)
+
+            builder
+                .Property(x => x.Code)
                 .HasColumnName("code")
                 .HasColumnType("varchar(10)")
                 .IsRequired();
-            builder.HasIndex(x => x.Code)
-            .IsUnique();
-            
-            builder.Property(x => x.Coordinates)
+            builder.HasIndex(x => x.Code).IsUnique();
+
+            builder
+                .Property(x => x.Coordinates)
                 .HasColumnName("coordinates")
                 .HasColumnType("Point")
                 .IsRequired();
