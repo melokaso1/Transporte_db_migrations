@@ -1,4 +1,3 @@
-using System;
 using ejercicio_5.src.Modules.CitiesOrMunicipalities.Infrastructure.Entity;
 using ejercicio_5.src.Modules.Customers.Infrastructure.Entity;
 using ejercicio_5.src.Modules.StatusLoads.Infrastructure.Entity;

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using NetTopologySuite.Geometries;
 
 namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity

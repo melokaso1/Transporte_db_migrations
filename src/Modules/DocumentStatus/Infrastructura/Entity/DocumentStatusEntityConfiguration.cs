@@ -1,12 +1,15 @@
+using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ejercicio_5.src.Modules.TypeLoad.Infrastructure.Entity
+namespace ejercicio_5.src.Modules.DocumentStatus.Infrastructura.Entity
 {
-    public sealed class TypeLoadEntityConfiguration : IEntityTypeConfiguration<TypeLoadEntity>
+    public sealed class DocumentStatusEntityConfiguration
+        : IEntityTypeConfiguration<DocumentStatusEntity>
     {
-        public void Configure(EntityTypeBuilder<TypeLoadEntity> builder)
+        public void Configure(EntityTypeBuilder<DocumentStatusEntity> builder)
         {
-            builder.ToTable("Type_loads");
+            builder.ToTable("DocumentStatus");
 
             builder.HasKey(x => x.id);
             builder.Property(x => x.id).HasColumnName("id").HasColumnType("uuid").IsRequired();

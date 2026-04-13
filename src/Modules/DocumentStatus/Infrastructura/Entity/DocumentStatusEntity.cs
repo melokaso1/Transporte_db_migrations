@@ -1,8 +1,8 @@
 using System;
 
-namespace ejercicio_5.src.Modules.TypeLoad.Infrastructure.Entity
+namespace ejercicio_5.src.Modules.DocumentStatus.Infrastructura.Entity
 {
-    public class TypeLoadEntity
+    public class DocumentStatusEntity
     {
         public Guid id { get; set; }
         public string? name { get; set; }

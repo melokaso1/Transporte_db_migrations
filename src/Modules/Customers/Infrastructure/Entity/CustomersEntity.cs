@@ -1,5 +1,4 @@
 using System;
-using Microsoft.EntityFrameworkCore;
 
 namespace ejercicio_5.src.Modules.Customers.Infrastructure.Entity
 {

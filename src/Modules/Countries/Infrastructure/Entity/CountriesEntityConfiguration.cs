@@ -1,6 +1,3 @@
-using System;
-using ejercicio_5.src.Modules.Countries.Infrastructure.Entity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ejercicio_5.src.Modules.Countries.Infrastructure.Entity

@@ -1,5 +1,3 @@
-using System;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ejercicio_5.src.Modules.StatusLoads.Infrastructure.Entity

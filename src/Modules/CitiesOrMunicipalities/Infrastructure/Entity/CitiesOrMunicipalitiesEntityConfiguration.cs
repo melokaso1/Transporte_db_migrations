@@ -1,4 +1,3 @@
-using System;
 using ejercicio_5.src.Modules.StatesOrRegions.Infrastructure.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
