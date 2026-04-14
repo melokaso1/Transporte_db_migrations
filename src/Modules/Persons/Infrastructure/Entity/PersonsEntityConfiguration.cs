@@ -13,7 +13,7 @@ namespace ejercicio_5.src.Modules.Persons.Infrastructure.Entity
             builder.ToTable("Persons");
 
             builder.HasKey(p => p.id);
-            builder.Property(p => p.id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(p => p.id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(p => p.FirstName)
@@ -36,7 +36,7 @@ namespace ejercicio_5.src.Modules.Persons.Infrastructure.Entity
             builder
                 .Property(p => p.CityId)
                 .HasColumnName("city_id")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<CitiesOrMunicipalitiesEntity>()
@@ -53,7 +53,7 @@ namespace ejercicio_5.src.Modules.Persons.Infrastructure.Entity
             builder
                 .Property(p => p.PersonStatusId)
                 .HasColumnName("person_status_id")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<PersonStatusEntity>()

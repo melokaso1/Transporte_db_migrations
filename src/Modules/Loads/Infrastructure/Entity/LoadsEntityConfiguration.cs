@@ -14,12 +14,12 @@ namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity
             builder.ToTable("Loads");
 
             builder.HasKey(x => x.id);
-            builder.Property(x => x.id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.CustomerId)
                 .HasColumnName("CustomerId")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<CustomersEntity>()
@@ -30,7 +30,7 @@ namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity
             builder
                 .Property(x => x.TypeLoadId)
                 .HasColumnName("TypeLoadId")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<TypeLoadEntity>()
@@ -41,7 +41,7 @@ namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity
             builder
                 .Property(x => x.OriginCityId)
                 .HasColumnName("OriginCityId")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<CitiesOrMunicipalitiesEntity>()
@@ -52,7 +52,7 @@ namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity
             builder
                 .Property(x => x.DestinationCityId)
                 .HasColumnName("DestinationCityId")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<CitiesOrMunicipalitiesEntity>()
@@ -63,13 +63,13 @@ namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity
             builder
                 .Property(x => x.OriginAddress)
                 .HasColumnName("OriginAddress")
-                .HasColumnType("Point")
+                .HasColumnType("text")
                 .IsRequired();
 
             builder
                 .Property(x => x.DestinationAddress)
                 .HasColumnName("DestinationAddress")
-                .HasColumnType("Point")
+                .HasColumnType("text")
                 .IsRequired();
 
             builder
@@ -99,7 +99,7 @@ namespace ejercicio_5.src.Modules.Loads.Infrastructure.Entity
             builder
                 .Property(x => x.StatusId)
                 .HasColumnName("StatusId")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<StatusLoadsEntity>()

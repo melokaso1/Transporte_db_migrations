@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ejercicio_5.src.Modules.Countries.Infrastructure.Entity
@@ -9,7 +10,7 @@ namespace ejercicio_5.src.Modules.Countries.Infrastructure.Entity
             builder.ToTable("Countries");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.IsoCode)

@@ -12,7 +12,7 @@ namespace ejercicio_5.src.Modules.DocumentCategory.Infrastructure.Entity
             builder.ToTable("DocumentCategory");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.Name)

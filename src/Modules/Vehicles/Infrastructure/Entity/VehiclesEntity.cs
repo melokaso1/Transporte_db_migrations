@@ -7,7 +7,7 @@ namespace ejercicio_5.src.Modules.Vehicles.Infrastructure.Entity
 {
     public class VehiclesEntity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string? Plate { get; set; }
         public int TypeVehicleId { get; set; }
         public string? brand { get; set; }

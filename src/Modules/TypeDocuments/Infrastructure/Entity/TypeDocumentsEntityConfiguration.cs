@@ -12,7 +12,7 @@ namespace ejercicio_5.src.Modules.TypeDocuments.Infrastructure.Entity
             builder.ToTable("TypeDocuments");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.Name)
@@ -23,7 +23,7 @@ namespace ejercicio_5.src.Modules.TypeDocuments.Infrastructure.Entity
             builder
                 .Property(x => x.CategoryId)
                 .HasColumnName("category_id")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<DocumentCategoryEntity>()

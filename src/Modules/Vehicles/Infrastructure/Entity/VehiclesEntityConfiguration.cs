@@ -13,7 +13,7 @@ namespace ejercicio_5.src.Modules.Vehicles.Infrastructure.Entity
             builder.ToTable("Vehicles");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.Plate)
@@ -24,7 +24,7 @@ namespace ejercicio_5.src.Modules.Vehicles.Infrastructure.Entity
             builder
                 .Property(x => x.TypeVehicleId)
                 .HasColumnName("type_vehicle_id")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<TypesVehiclesEntity>()
@@ -59,7 +59,7 @@ namespace ejercicio_5.src.Modules.Vehicles.Infrastructure.Entity
             builder
                 .Property(x => x.OwnerId)
                 .HasColumnName("owner_id")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<PersonsEntity>()
@@ -70,7 +70,7 @@ namespace ejercicio_5.src.Modules.Vehicles.Infrastructure.Entity
             builder
                 .Property(x => x.StatusVehicleId)
                 .HasColumnName("status_vehicle_id")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<VehiclesStatusEntity>()

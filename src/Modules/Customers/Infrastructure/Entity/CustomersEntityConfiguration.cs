@@ -11,12 +11,12 @@ namespace ejercicio_5.src.Modules.Customers.Infrastructure.Entity
             builder.ToTable("Costumers");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.Person_id)
                 .HasColumnName("person_id")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<PersonsEntity>()

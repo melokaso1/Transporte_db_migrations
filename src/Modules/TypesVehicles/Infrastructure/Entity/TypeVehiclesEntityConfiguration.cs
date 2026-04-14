@@ -12,7 +12,7 @@ namespace ejercicio_5.src.Modules.TypesVehicles.Infrastructure.Entity
             builder.ToTable("TypeVehicles");
 
             builder.HasKey(x => x.id);
-            builder.Property(x => x.id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.name)

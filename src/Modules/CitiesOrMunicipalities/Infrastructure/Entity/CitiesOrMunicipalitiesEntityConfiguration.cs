@@ -12,7 +12,7 @@ namespace ejercicio_5.src.Modules.CitiesOrMunicipalities.Infrastructure.Entity
             builder.ToTable("CitiesOrMunicipalities");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.Name)
@@ -23,7 +23,7 @@ namespace ejercicio_5.src.Modules.CitiesOrMunicipalities.Infrastructure.Entity
             builder
                 .Property(x => x.StateregId)
                 .HasColumnName("statereg_id")
-                .HasColumnType("uuid")
+                .HasColumnType("int")
                 .IsRequired();
             builder
                 .HasOne<StatesOrRegionsEntity>()
@@ -39,9 +39,9 @@ namespace ejercicio_5.src.Modules.CitiesOrMunicipalities.Infrastructure.Entity
             builder.HasIndex(x => x.Code).IsUnique();
 
             builder
-                .Property(x => x.Coordinates)
+                .Property(x => x.coordinates)
                 .HasColumnName("coordinates")
-                .HasColumnType("Point")
+                .HasColumnType("text")
                 .IsRequired();
         }
     }

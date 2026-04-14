@@ -10,7 +10,7 @@ namespace ejercicio_5.src.Modules.StatusBids.Infrastructure.Entity
             builder.ToTable("StatusBids");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.Name)

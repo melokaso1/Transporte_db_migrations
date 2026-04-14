@@ -12,7 +12,7 @@ namespace ejercicio_5.src.Modules.DocumentStatus.Infrastructura.Entity
             builder.ToTable("DocumentStatus");
 
             builder.HasKey(x => x.id);
-            builder.Property(x => x.id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.name)

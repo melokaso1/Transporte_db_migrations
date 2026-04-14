@@ -12,7 +12,7 @@ namespace ejercicio_5.src.Modules.PersonStatus.Infrastructure.Entity
             builder.ToTable("PersonStatus");
 
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("uuid").IsRequired();
+            builder.Property(x => x.Id).HasColumnName("id").HasColumnType("int").IsRequired();
 
             builder
                 .Property(x => x.Name)

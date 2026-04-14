@@ -4,7 +4,7 @@ namespace ejercicio_5.src.Modules.TypesVehicles.Infrastructure.Entity
 {
     public class TypesVehiclesEntity
     {
-        public Guid id { get; set; }
+        public int id { get; set; }
         public string? name { get; set; }
         public decimal CapacityKg { get; set; }
         public int Axles { get; set; }

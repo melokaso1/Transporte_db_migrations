@@ -4,7 +4,7 @@ namespace ejercicio_5.src.Modules.Drivers.Infrastructure.Entity
 {
     public class DriversEntity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public int PersonId { get; set; }
         public string? licenseCategory { get; set; }
         public int ExperienceYears { get; set; }
